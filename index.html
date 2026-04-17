@@ -396,6 +396,23 @@
     transform: translateY(-1px);
   }
 
+  /* Badge "nouveau" sur le projet 3 */
+  .project-new-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: var(--bordeaux);
+    color: #fff;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 20px;
+    z-index: 5;
+    box-shadow: 0 2px 8px rgba(107,39,55,0.4);
+  }
+
   .project-body { padding: 28px; }
 
   .project-tags {
@@ -414,6 +431,13 @@
     border-radius: 20px;
     background: var(--bordeaux-pale);
     color: var(--bordeaux);
+  }
+
+  /* Tag spécial IA */
+  .tag.tag-ai {
+    background: rgba(107,39,55,0.12);
+    color: var(--bordeaux);
+    border: 1px solid rgba(107,39,55,0.25);
   }
 
   .project-title {
@@ -751,12 +775,12 @@
       <div class="stat-label">Lignes traitées</div>
     </div>
     <div class="stat">
-      <div class="stat-num">5</div>
-      <div class="stat-label">Étapes pipeline</div>
+      <div class="stat-num">3</div>
+      <div class="stat-label">Projets data</div>
     </div>
     <div class="stat">
-      <div class="stat-num">2</div>
-      <div class="stat-label">Projets data</div>
+      <div class="stat-num">LLM</div>
+      <div class="stat-label">IA intégrée</div>
     </div>
   </div>
 </section>
@@ -787,9 +811,24 @@
       <div class="skill-level">DAX · Dashboards</div>
     </div>
     <div class="skill-card">
+      <div class="skill-icon">🌐</div>
+      <div class="skill-name">Flask</div>
+      <div class="skill-level">API REST · Chart.js</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">🤖</div>
+      <div class="skill-name">LLM · Groq</div>
+      <div class="skill-level">Llama 3 · Insights IA</div>
+    </div>
+    <div class="skill-card">
       <div class="skill-icon">📋</div>
       <div class="skill-name">Excel</div>
       <div class="skill-level">Avancé (TCD · Power Query)</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">📈</div>
+      <div class="skill-name">Apache Superset</div>
+      <div class="skill-level">BI Open Source</div>
     </div>
     <div class="skill-card">
       <div class="skill-icon">🔧</div>
@@ -813,7 +852,6 @@
 
     <!-- PROJET 1 -->
     <div class="project-card reveal">
-      <!-- Galerie preview 2x2 -->
       <div class="project-gallery-preview" onclick="openLightbox('p1', 0)">
         <div class="preview-thumb">
           <img src="DataQualityPipelineMonitoring/1.png" alt="KPI RH">
@@ -877,7 +915,6 @@
 
     <!-- PROJET 2 -->
     <div class="project-card reveal">
-      <!-- Galerie preview 2x2 -->
       <div class="project-gallery-preview" onclick="openLightbox('p2', 0)">
         <div class="preview-thumb">
           <img src="CustomerDataPipelineAnalytics/1.png" alt="Customer Analytics">
@@ -935,6 +972,72 @@
         </div>
         <div class="project-links">
           <a href="https://github.com/CarnageM-10/customer-data-pipeline-ecommerce" target="_blank" class="project-link github">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJET 3 — Sales Predictive Dashboard -->
+    <div class="project-card reveal">
+      <div class="project-gallery-preview" onclick="openLightbox('p3', 0)">
+        <!-- Badge nouveau -->
+        <div class="project-new-badge">Nouveau</div>
+        <div class="preview-thumb">
+          <img src="SalesPredictiveDashboard/1.png" alt="Pipeline & Insights IA">
+          <div class="thumb-overlay">
+            <div class="thumb-overlay-title">Pipeline & Insights IA</div>
+            <div class="thumb-overlay-desc">Script de génération automatique d'insights business via Llama 3 / Groq API</div>
+          </div>
+        </div>
+        <div class="preview-thumb">
+          <img src="SalesPredictiveDashboard/2.png" alt="Dashboard Flask">
+          <div class="thumb-overlay">
+            <div class="thumb-overlay-title">Dashboard Flask</div>
+            <div class="thumb-overlay-desc">Interface web interactive : KPIs, graphiques Chart.js et insights IA en temps réel</div>
+          </div>
+        </div>
+        <div class="preview-thumb">
+          <img src="SalesPredictiveDashboard/3.png" alt="Évolution mensuelle des ventes">
+          <div class="thumb-overlay">
+            <div class="thumb-overlay-title">Évolution mensuelle</div>
+            <div class="thumb-overlay-desc">Courbe temporelle du chiffre d'affaires mois par mois — Apache Superset</div>
+          </div>
+        </div>
+        <div class="preview-thumb">
+          <img src="SalesPredictiveDashboard/4.png" alt="Répartition par catégorie & genre">
+          <div class="thumb-overlay">
+            <div class="thumb-overlay-title">Répartition catégorie & genre</div>
+            <div class="thumb-overlay-desc">Distribution des ventes par segment produit et profil client — Apache Superset</div>
+          </div>
+        </div>
+        <button class="preview-expand-btn" onclick="openLightbox('p3', 0); event.stopPropagation();">⤢ Voir en grand</button>
+      </div>
+
+      <div class="project-body">
+        <div class="project-tags">
+          <span class="tag">Python</span>
+          <span class="tag">Flask</span>
+          <span class="tag tag-ai">LLM · Groq</span>
+          <span class="tag">Chart.js</span>
+          <span class="tag">Apache Superset</span>
+        </div>
+        <div class="project-title">Sales Predictive Dashboard</div>
+        <p class="project-desc">Pipeline data end-to-end sur des données de ventes retail. Nettoyage Pandas, génération automatique d'insights business via Llama 3 (Groq API), dashboard Flask interactif et visualisations Apache Superset.</p>
+        <div class="project-metrics">
+          <div class="metric">
+            <div class="metric-val">5</div>
+            <div class="metric-label">Insights IA</div>
+          </div>
+          <div class="metric">
+            <div class="metric-val">4</div>
+            <div class="metric-label">Étapes pipeline</div>
+          </div>
+          <div class="metric">
+            <div class="metric-val">2</div>
+            <div class="metric-label">Interfaces viz</div>
+          </div>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/CarnageM-10/sales-predictive-dashboard" target="_blank" class="project-link github">GitHub</a>
         </div>
       </div>
     </div>
@@ -1054,6 +1157,28 @@
         src: 'CustomerDataPipelineAnalytics/4.png',
         title: 'Product Performance',
         desc: 'Analyse des top produits par CA, volume vendu et nombre de clients'
+      }
+    ],
+    p3: [
+      {
+        src: 'SalesPredictiveDashboard/1.png',
+        title: 'Pipeline & Insights IA',
+        desc: 'Script de génération automatique d\'insights business via Llama 3 / Groq API'
+      },
+      {
+        src: 'SalesPredictiveDashboard/2.png',
+        title: 'Dashboard Flask',
+        desc: 'Interface web interactive : KPIs, graphiques Chart.js et insights IA en temps réel'
+      },
+      {
+        src: 'SalesPredictiveDashboard/3.png',
+        title: 'Évolution mensuelle des ventes',
+        desc: 'Courbe temporelle du chiffre d\'affaires mois par mois — Apache Superset'
+      },
+      {
+        src: 'SalesPredictiveDashboard/4.png',
+        title: 'Répartition par catégorie & genre',
+        desc: 'Distribution des ventes par segment produit et profil client — Apache Superset'
       }
     ]
   };
