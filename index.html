@@ -289,10 +289,10 @@
     text-transform: uppercase;
   }
 
-  /* PROJECTS */
+  /* PROJECTS — grille 2 colonnes fixe, 2 lignes */
   .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 32px;
   }
 
@@ -337,9 +337,7 @@
     transition: transform 0.4s ease;
   }
 
-  .preview-thumb:hover img {
-    transform: scale(1.06);
-  }
+  .preview-thumb:hover img { transform: scale(1.06); }
 
   .preview-thumb .thumb-overlay {
     position: absolute;
@@ -353,9 +351,7 @@
     padding: 10px;
   }
 
-  .preview-thumb:hover .thumb-overlay {
-    opacity: 1;
-  }
+  .preview-thumb:hover .thumb-overlay { opacity: 1; }
 
   .thumb-overlay-title {
     font-size: 11px;
@@ -396,7 +392,6 @@
     transform: translateY(-1px);
   }
 
-  /* Badge "nouveau" sur le projet 3 */
   .project-new-badge {
     position: absolute;
     top: 12px;
@@ -433,7 +428,6 @@
     color: var(--bordeaux);
   }
 
-  /* Tag spécial IA */
   .tag.tag-ai {
     background: rgba(107,39,55,0.12);
     color: var(--bordeaux);
@@ -482,10 +476,7 @@
     margin-top: 2px;
   }
 
-  .project-links {
-    display: flex;
-    gap: 12px;
-  }
+  .project-links { display: flex; gap: 12px; }
 
   .project-link {
     font-size: 12px;
@@ -500,20 +491,10 @@
     transition: all 0.3s;
   }
 
-  .project-link:hover {
-    background: var(--bordeaux);
-    color: var(--creme);
-  }
+  .project-link:hover { background: var(--bordeaux); color: var(--creme); }
 
-  .project-link.github {
-    color: var(--marron);
-    border-color: var(--marron);
-  }
-
-  .project-link.github:hover {
-    background: var(--marron);
-    color: var(--creme);
-  }
+  .project-link.github { color: var(--marron); border-color: var(--marron); }
+  .project-link.github:hover { background: var(--marron); color: var(--creme); }
 
   /* LIGHTBOX */
   .lightbox {
@@ -528,9 +509,7 @@
     flex-direction: column;
   }
 
-  .lightbox.open {
-    display: flex;
-  }
+  .lightbox.open { display: flex; }
 
   .lightbox-inner {
     position: relative;
@@ -550,10 +529,7 @@
     transition: opacity 0.25s ease;
   }
 
-  .lightbox-caption {
-    margin-top: 20px;
-    text-align: center;
-  }
+  .lightbox-caption { margin-top: 20px; text-align: center; }
 
   .lightbox-caption-title {
     font-family: 'Playfair Display', serif;
@@ -600,10 +576,7 @@
     transition: color 0.2s, transform 0.2s;
   }
 
-  .lightbox-close:hover {
-    color: #fff;
-    transform: rotate(90deg);
-  }
+  .lightbox-close:hover { color: #fff; transform: rotate(90deg); }
 
   .lightbox-counter {
     position: fixed;
@@ -615,11 +588,7 @@
     text-transform: uppercase;
   }
 
-  .lightbox-dots {
-    display: flex;
-    gap: 8px;
-    margin-top: 20px;
-  }
+  .lightbox-dots { display: flex; gap: 8px; margin-top: 20px; }
 
   .lightbox-dot {
     width: 6px; height: 6px;
@@ -629,10 +598,7 @@
     transition: background 0.2s, transform 0.2s;
   }
 
-  .lightbox-dot.active {
-    background: var(--bordeaux-light);
-    transform: scale(1.4);
-  }
+  .lightbox-dot.active { background: var(--bordeaux-light); transform: scale(1.4); }
 
   /* CONTACT */
   .contact-section { background: var(--marron); color: var(--creme); }
@@ -685,10 +651,7 @@
     line-height: 1.4;
   }
 
-  .contact-right span {
-    font-size: 14px;
-    color: rgba(245,240,232,0.6);
-  }
+  .contact-right span { font-size: 14px; color: rgba(245,240,232,0.6); }
 
   /* FOOTER */
   footer {
@@ -726,10 +689,7 @@
     transition: opacity 0.7s ease, transform 0.7s ease;
   }
 
-  .reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
 
   /* RESPONSIVE */
   @media (max-width: 900px) {
@@ -738,6 +698,7 @@
     .hero { padding: 100px 24px 60px; }
     .hero-stats { display: none; }
     section { padding: 60px 24px; }
+    .projects-grid { grid-template-columns: 1fr; }
     .contact-grid { grid-template-columns: 1fr; }
     .divider { margin: 0 24px; }
     footer { padding: 24px; }
@@ -775,12 +736,12 @@
       <div class="stat-label">Lignes traitées</div>
     </div>
     <div class="stat">
-      <div class="stat-num">3</div>
+      <div class="stat-num">4</div>
       <div class="stat-label">Projets data</div>
     </div>
     <div class="stat">
-      <div class="stat-num">LLM</div>
-      <div class="stat-label">IA intégrée</div>
+      <div class="stat-num">ML</div>
+      <div class="stat-label">IA & Prédictif</div>
     </div>
   </div>
 </section>
@@ -798,7 +759,7 @@
     <div class="skill-card">
       <div class="skill-icon">🐍</div>
       <div class="skill-name">Python</div>
-      <div class="skill-level">Pandas · NumPy</div>
+      <div class="skill-level">Pandas · NumPy · Scikit-learn</div>
     </div>
     <div class="skill-card">
       <div class="skill-icon">🗄️</div>
@@ -821,14 +782,19 @@
       <div class="skill-level">Llama 3 · Insights IA</div>
     </div>
     <div class="skill-card">
-      <div class="skill-icon">📋</div>
-      <div class="skill-name">Excel</div>
-      <div class="skill-level">Avancé (TCD · Power Query)</div>
+      <div class="skill-icon">🧠</div>
+      <div class="skill-name">Machine Learning</div>
+      <div class="skill-level">Random Forest · Prédictif</div>
     </div>
     <div class="skill-card">
       <div class="skill-icon">📈</div>
       <div class="skill-name">Apache Superset</div>
       <div class="skill-level">BI Open Source</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">📋</div>
+      <div class="skill-name">Excel</div>
+      <div class="skill-level">Avancé (TCD · Power Query)</div>
     </div>
     <div class="skill-card">
       <div class="skill-icon">🔧</div>
@@ -883,7 +849,6 @@
         </div>
         <button class="preview-expand-btn" onclick="openLightbox('p1', 0); event.stopPropagation();">⤢ Voir en grand</button>
       </div>
-
       <div class="project-body">
         <div class="project-tags">
           <span class="tag">Python</span>
@@ -894,18 +859,9 @@
         <div class="project-title">Data Quality & Pipeline Monitoring</div>
         <p class="project-desc">Pipeline de données complet sur 6,3M de transactions financières et 49K données RH. Nettoyage Pandas, modélisation en schéma étoile, règles de contrôle qualité et dashboard de pilotage.</p>
         <div class="project-metrics">
-          <div class="metric">
-            <div class="metric-val">6.3M</div>
-            <div class="metric-label">Transactions</div>
-          </div>
-          <div class="metric">
-            <div class="metric-val">8 197</div>
-            <div class="metric-label">Fraudes détectées</div>
-          </div>
-          <div class="metric">
-            <div class="metric-val">5</div>
-            <div class="metric-label">Règles qualité</div>
-          </div>
+          <div class="metric"><div class="metric-val">6.3M</div><div class="metric-label">Transactions</div></div>
+          <div class="metric"><div class="metric-val">8 197</div><div class="metric-label">Fraudes détectées</div></div>
+          <div class="metric"><div class="metric-val">5</div><div class="metric-label">Règles qualité</div></div>
         </div>
         <div class="project-links">
           <a href="https://github.com/CarnageM-10/data-quality-finance" target="_blank" class="project-link github">GitHub</a>
@@ -946,7 +902,6 @@
         </div>
         <button class="preview-expand-btn" onclick="openLightbox('p2', 0); event.stopPropagation();">⤢ Voir en grand</button>
       </div>
-
       <div class="project-body">
         <div class="project-tags">
           <span class="tag">SQL Avancé</span>
@@ -957,18 +912,9 @@
         <div class="project-title">Customer Data Pipeline & Analytics</div>
         <p class="project-desc">Pipeline ETL sur 1M+ de transactions e-commerce (Online Retail II). Nettoyage Python, segmentation RFM, schéma étoile SQLite et dashboard Power BI interactif.</p>
         <div class="project-metrics">
-          <div class="metric">
-            <div class="metric-val">1M+</div>
-            <div class="metric-label">Transactions</div>
-          </div>
-          <div class="metric">
-            <div class="metric-val">5 878</div>
-            <div class="metric-label">Clients</div>
-          </div>
-          <div class="metric">
-            <div class="metric-val">7</div>
-            <div class="metric-label">Segments RFM</div>
-          </div>
+          <div class="metric"><div class="metric-val">1M+</div><div class="metric-label">Transactions</div></div>
+          <div class="metric"><div class="metric-val">5 878</div><div class="metric-label">Clients</div></div>
+          <div class="metric"><div class="metric-val">7</div><div class="metric-label">Segments RFM</div></div>
         </div>
         <div class="project-links">
           <a href="https://github.com/CarnageM-10/customer-data-pipeline-ecommerce" target="_blank" class="project-link github">GitHub</a>
@@ -979,8 +925,6 @@
     <!-- PROJET 3 — Sales Predictive Dashboard -->
     <div class="project-card reveal">
       <div class="project-gallery-preview" onclick="openLightbox('p3', 0)">
-        <!-- Badge nouveau -->
-        <div class="project-new-badge">Nouveau</div>
         <div class="preview-thumb">
           <img src="SalesPredictiveDashboard/1.png" alt="Pipeline & Insights IA">
           <div class="thumb-overlay">
@@ -1011,7 +955,6 @@
         </div>
         <button class="preview-expand-btn" onclick="openLightbox('p3', 0); event.stopPropagation();">⤢ Voir en grand</button>
       </div>
-
       <div class="project-body">
         <div class="project-tags">
           <span class="tag">Python</span>
@@ -1023,21 +966,66 @@
         <div class="project-title">Sales Predictive Dashboard</div>
         <p class="project-desc">Pipeline data end-to-end sur des données de ventes retail. Nettoyage Pandas, modélisation en base SQLite, génération automatique d'insights business via Llama 3 (Groq API), dashboard Flask interactif et visualisations Apache Superset via Preset.io.</p>
         <div class="project-metrics">
-          <div class="metric">
-            <div class="metric-val">5</div>
-            <div class="metric-label">Insights IA</div>
-          </div>
-          <div class="metric">
-            <div class="metric-val">4</div>
-            <div class="metric-label">Étapes pipeline</div>
-          </div>
-          <div class="metric">
-            <div class="metric-val">2</div>
-            <div class="metric-label">Interfaces viz</div>
-          </div>
+          <div class="metric"><div class="metric-val">5</div><div class="metric-label">Insights IA</div></div>
+          <div class="metric"><div class="metric-val">4</div><div class="metric-label">Étapes pipeline</div></div>
+          <div class="metric"><div class="metric-val">2</div><div class="metric-label">Interfaces viz</div></div>
         </div>
         <div class="project-links">
           <a href="https://github.com/CarnageM-10/sales-predictive-dashboard" target="_blank" class="project-link github">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJET 4 — HR Attrition & Predictive Analytics -->
+    <div class="project-card reveal">
+      <div class="project-gallery-preview" onclick="openLightbox('p4', 0)">
+        <div class="project-new-badge">Nouveau</div>
+        <div class="preview-thumb">
+          <img src="HrAttritionAnalytics/1.png" alt="KPI Cards RH">
+          <div class="thumb-overlay">
+            <div class="thumb-overlay-title">KPI Cards RH</div>
+            <div class="thumb-overlay-desc">Vue globale : total employés, taux d'attrition 16.1% et employés à risque élevé</div>
+          </div>
+        </div>
+        <div class="preview-thumb">
+          <img src="HrAttritionAnalytics/2.png" alt="Facteurs d'attrition">
+          <div class="thumb-overlay">
+            <div class="thumb-overlay-title">Facteurs d'attrition</div>
+            <div class="thumb-overlay-desc">Analyse des variables clés : overtime, satisfaction, déplacements et ancienneté</div>
+          </div>
+        </div>
+        <div class="preview-thumb">
+          <img src="HrAttritionAnalytics/3.png" alt="Profils employés">
+          <div class="thumb-overlay">
+            <div class="thumb-overlay-title">Profils employés</div>
+            <div class="thumb-overlay-desc">Nuage de points âge vs salaire coloré par niveau de risque d'attrition</div>
+          </div>
+        </div>
+        <div class="preview-thumb">
+          <img src="HrAttritionAnalytics/4.png" alt="Top 15 facteurs — Random Forest">
+          <div class="thumb-overlay">
+            <div class="thumb-overlay-title">Top 15 facteurs</div>
+            <div class="thumb-overlay-desc">Feature importance du modèle Random Forest — variables les plus prédictives</div>
+          </div>
+        </div>
+        <button class="preview-expand-btn" onclick="openLightbox('p4', 0); event.stopPropagation();">⤢ Voir en grand</button>
+      </div>
+      <div class="project-body">
+        <div class="project-tags">
+          <span class="tag">Python</span>
+          <span class="tag tag-ai">Scikit-learn</span>
+          <span class="tag">Power BI</span>
+          <span class="tag">Random Forest</span>
+        </div>
+        <div class="project-title">HR Attrition & Predictive Analytics</div>
+        <p class="project-desc">Conception d'un pipeline ETL complet sur les données RH IBM, analyse exploratoire avec Python, modélisation prédictive avec Scikit-learn pour scorer le risque d'attrition par employé et création d'un dashboard Power BI avec KPIs RH et insights actionnables pour les équipes métier.</p>
+        <div class="project-metrics">
+          <div class="metric"><div class="metric-val">1 470</div><div class="metric-label">Employés</div></div>
+          <div class="metric"><div class="metric-val">84%</div><div class="metric-label">Précision</div></div>
+          <div class="metric"><div class="metric-val">0.772</div><div class="metric-label">AUC-ROC</div></div>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/CarnageM-10/hr-attrition-analytics" target="_blank" class="project-link github">GitHub</a>
         </div>
       </div>
     </div>
@@ -1102,7 +1090,6 @@
 </footer>
 
 <script>
-  // ==================== SCROLL REVEAL ====================
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => {
@@ -1113,77 +1100,33 @@
   }, { threshold: 0.1 });
   reveals.forEach(el => observer.observe(el));
 
-  // ==================== DONNÉES GALERIES ====================
   const galleries = {
     p1: [
-      {
-        src: 'DataQualityPipelineMonitoring/1.png',
-        title: 'KPI RH',
-        desc: 'Tableau de bord des indicateurs RH : effectifs, turnover et données collaborateurs'
-      },
-      {
-        src: 'DataQualityPipelineMonitoring/2.png',
-        title: 'KPI Transactions & Fraude',
-        desc: 'Dashboard de surveillance des transactions financières et détection des fraudes'
-      },
-      {
-        src: 'DataQualityPipelineMonitoring/3.png',
-        title: 'Visualisation SQL',
-        desc: 'Requêtes analytiques et résultats de contrôle qualité sur DBeaver'
-      },
-      {
-        src: 'DataQualityPipelineMonitoring/4.png',
-        title: 'Diagramme étoile',
-        desc: 'Modélisation du schéma étoile relationnel et environnement VS Code'
-      }
+      { src: 'DataQualityPipelineMonitoring/1.png', title: 'KPI RH', desc: 'Tableau de bord des indicateurs RH : effectifs, turnover et données collaborateurs' },
+      { src: 'DataQualityPipelineMonitoring/2.png', title: 'KPI Transactions & Fraude', desc: 'Dashboard de surveillance des transactions financières et détection des fraudes' },
+      { src: 'DataQualityPipelineMonitoring/3.png', title: 'Visualisation SQL', desc: 'Requêtes analytiques et résultats de contrôle qualité sur DBeaver' },
+      { src: 'DataQualityPipelineMonitoring/4.png', title: 'Diagramme étoile', desc: 'Modélisation du schéma étoile relationnel et environnement VS Code' }
     ],
     p2: [
-      {
-        src: 'CustomerDataPipelineAnalytics/1.png',
-        title: 'Customer Analytics',
-        desc: 'Vue globale des KPIs clients : CA total, clients actifs et panier moyen'
-      },
-      {
-        src: 'CustomerDataPipelineAnalytics/2.png',
-        title: 'Executive Summary',
-        desc: 'Synthèse exécutive des performances e-commerce sur la période analysée'
-      },
-      {
-        src: 'CustomerDataPipelineAnalytics/3.png',
-        title: 'Geographic Science',
-        desc: 'Répartition géographique du chiffre d\'affaires par pays'
-      },
-      {
-        src: 'CustomerDataPipelineAnalytics/4.png',
-        title: 'Product Performance',
-        desc: 'Analyse des top produits par CA, volume vendu et nombre de clients'
-      }
+      { src: 'CustomerDataPipelineAnalytics/1.png', title: 'Customer Analytics', desc: 'Vue globale des KPIs clients : CA total, clients actifs et panier moyen' },
+      { src: 'CustomerDataPipelineAnalytics/2.png', title: 'Executive Summary', desc: 'Synthèse exécutive des performances e-commerce sur la période analysée' },
+      { src: 'CustomerDataPipelineAnalytics/3.png', title: 'Geographic Science', desc: 'Répartition géographique du chiffre d\'affaires par pays' },
+      { src: 'CustomerDataPipelineAnalytics/4.png', title: 'Product Performance', desc: 'Analyse des top produits par CA, volume vendu et nombre de clients' }
     ],
     p3: [
-      {
-        src: 'SalesPredictiveDashboard/1.png',
-        title: 'Pipeline & Insights IA',
-        desc: 'Script de génération automatique d\'insights business via Llama 3 / Groq API'
-      },
-      {
-        src: 'SalesPredictiveDashboard/2.png',
-        title: 'Dashboard Flask',
-        desc: 'Interface web interactive : KPIs, graphiques Chart.js et insights IA en temps réel'
-      },
-      {
-        src: 'SalesPredictiveDashboard/3.png',
-        title: 'Évolution mensuelle des ventes',
-        desc: 'Courbe temporelle du chiffre d\'affaires mois par mois — Apache Superset'
-      },
-      {
-        src: 'SalesPredictiveDashboard/4.png',
-        title: 'Répartition par catégorie & genre',
-        desc: 'Distribution des ventes par segment produit et profil client — Apache Superset'
-      }
+      { src: 'SalesPredictiveDashboard/1.png', title: 'Pipeline & Insights IA', desc: 'Script de génération automatique d\'insights business via Llama 3 / Groq API' },
+      { src: 'SalesPredictiveDashboard/2.png', title: 'Dashboard Flask', desc: 'Interface web interactive : KPIs, graphiques Chart.js et insights IA en temps réel' },
+      { src: 'SalesPredictiveDashboard/3.png', title: 'Évolution mensuelle des ventes', desc: 'Courbe temporelle du chiffre d\'affaires mois par mois — Apache Superset' },
+      { src: 'SalesPredictiveDashboard/4.png', title: 'Répartition par catégorie & genre', desc: 'Distribution des ventes par segment produit et profil client — Apache Superset' }
+    ],
+    p4: [
+      { src: 'HrAttritionAnalytics/1.png', title: 'KPI Cards RH', desc: 'Vue globale : total employés, taux d\'attrition 16.1% et employés à risque élevé' },
+      { src: 'HrAttritionAnalytics/2.png', title: 'Facteurs d\'attrition', desc: 'Analyse des variables clés : overtime, satisfaction, déplacements et ancienneté' },
+      { src: 'HrAttritionAnalytics/3.png', title: 'Profils employés', desc: 'Nuage de points âge vs salaire coloré par niveau de risque d\'attrition' },
+      { src: 'HrAttritionAnalytics/4.png', title: 'Top 15 facteurs — Random Forest', desc: 'Feature importance du modèle Random Forest — variables les plus prédictives' }
     ]
   };
 
-  // ==================== LIGHTBOX ====================
   let currentGallery = [];
   let currentIndex   = 0;
 
@@ -1208,19 +1151,15 @@
   function renderLightbox() {
     const item = currentGallery[currentIndex];
     const img  = document.getElementById('lightbox-img');
-
     img.style.opacity = '0';
     setTimeout(() => {
       img.src = item.src;
       img.alt = item.title;
       img.style.opacity = '1';
     }, 120);
-
     document.getElementById('lightbox-title').textContent   = item.title;
     document.getElementById('lightbox-desc').textContent    = item.desc;
     document.getElementById('lightbox-counter').textContent = `${currentIndex + 1} / ${currentGallery.length}`;
-
-    // Dots
     const dots = document.getElementById('lightbox-dots');
     dots.innerHTML = '';
     currentGallery.forEach((_, i) => {
@@ -1231,7 +1170,6 @@
     });
   }
 
-  // Navigation clavier
   document.addEventListener('keydown', (e) => {
     if (!document.getElementById('lightbox').classList.contains('open')) return;
     if (e.key === 'ArrowRight') lightboxNav(1);
@@ -1239,7 +1177,6 @@
     if (e.key === 'Escape')     closeLightbox();
   });
 
-  // Clic hors image pour fermer
   document.getElementById('lightbox').addEventListener('click', (e) => {
     if (e.target === document.getElementById('lightbox')) closeLightbox();
   });
