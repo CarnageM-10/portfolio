@@ -289,7 +289,7 @@
     text-transform: uppercase;
   }
 
-  /* PROJECTS — grille 2 colonnes fixe, 2 lignes */
+  /* PROJECTS */
   .projects-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -309,7 +309,6 @@
     box-shadow: 0 20px 48px rgba(107,39,55,0.12);
   }
 
-  /* GALERIE PREVIEW 2x2 */
   .project-gallery-preview {
     width: 100%;
     height: 240px;
@@ -665,14 +664,12 @@
 
   footer span { color: var(--bordeaux-light); }
 
-  /* DIVIDER */
   .divider {
     height: 1px;
     background: linear-gradient(90deg, transparent, rgba(107,39,55,0.2), transparent);
     margin: 0 60px;
   }
 
-  /* ANIMATIONS */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(24px); }
     to   { opacity: 1; transform: translateY(0); }
@@ -691,7 +688,6 @@
 
   .reveal.visible { opacity: 1; transform: translateY(0); }
 
-  /* RESPONSIVE */
   @media (max-width: 900px) {
     nav { padding: 16px 24px; }
     .nav-links { display: none; }
@@ -709,7 +705,6 @@
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="nav-logo">FM</div>
   <ul class="nav-links">
@@ -719,7 +714,6 @@
   </ul>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-content">
     <div class="hero-tag">Data Engineer / Analyst · Alternant</div>
@@ -732,11 +726,11 @@
   </div>
   <div class="hero-stats">
     <div class="stat">
-      <div class="stat-num">6.3M</div>
-      <div class="stat-label">Lignes traitées</div>
+      <div class="stat-num">4.9B</div>
+      <div class="stat-label">Validations analysées</div>
     </div>
     <div class="stat">
-      <div class="stat-num">4</div>
+      <div class="stat-num">5</div>
       <div class="stat-label">Projets data</div>
     </div>
     <div class="stat">
@@ -748,7 +742,6 @@
 
 <div class="divider"></div>
 
-<!-- COMPÉTENCES -->
 <section class="skills-section" id="competences">
   <div class="reveal">
     <div class="section-label">Stack technique</div>
@@ -784,7 +777,7 @@
     <div class="skill-card">
       <div class="skill-icon">🧠</div>
       <div class="skill-name">Machine Learning</div>
-      <div class="skill-level">Random Forest · Prédictif</div>
+      <div class="skill-level">Random Forest · K-Means · Prédictif</div>
     </div>
     <div class="skill-card">
       <div class="skill-icon">📈</div>
@@ -806,7 +799,6 @@
 
 <div class="divider"></div>
 
-<!-- PROJETS -->
 <section id="projets">
   <div class="reveal">
     <div class="section-label">Réalisations</div>
@@ -922,7 +914,7 @@
       </div>
     </div>
 
-    <!-- PROJET 3 — Sales Predictive Dashboard -->
+    <!-- PROJET 3 -->
     <div class="project-card reveal">
       <div class="project-gallery-preview" onclick="openLightbox('p3', 0)">
         <div class="preview-thumb">
@@ -976,7 +968,7 @@
       </div>
     </div>
 
-    <!-- PROJET 4 — HR Attrition & Predictive Analytics -->
+    <!-- PROJET 4 -->
     <div class="project-card reveal">
       <div class="project-gallery-preview" onclick="openLightbox('p4', 0)">
         <div class="project-new-badge">Nouveau</div>
@@ -1030,12 +1022,68 @@
       </div>
     </div>
 
+    <!-- PROJET 5 — Mobilité IDF (pleine largeur) -->
+    <div class="project-card reveal" style="grid-column: 1 / -1;">
+      <div class="project-gallery-preview" onclick="openLightbox('p5', 0)" style="height: 280px;">
+        <div class="project-new-badge">Nouveau</div>
+        <div class="preview-thumb">
+          <img src="MobiliteIdf/1.png" alt="Vue globale — KPIs">
+          <div class="thumb-overlay">
+            <div class="thumb-overlay-title">Vue globale — KPIs</div>
+            <div class="thumb-overlay-desc">4,9 milliards de validations analysées — Top réseaux et stations les plus fréquentées</div>
+          </div>
+        </div>
+        <div class="preview-thumb">
+          <img src="MobiliteIdf/2.png" alt="Analyse temporelle">
+          <div class="thumb-overlay">
+            <div class="thumb-overlay-title">Analyse temporelle</div>
+            <div class="thumb-overlay-desc">Évolution mensuelle du trafic 2022–2024 et patterns par jour de semaine</div>
+          </div>
+        </div>
+        <div class="preview-thumb">
+          <img src="MobiliteIdf/3.png" alt="Top stations">
+          <div class="thumb-overlay">
+            <div class="thumb-overlay-title">Top stations</div>
+            <div class="thumb-overlay-desc">Classement des 20 stations les plus fréquentées — Saint-Lazare en tête avec 178M validations</div>
+          </div>
+        </div>
+        <div class="preview-thumb">
+          <img src="MobiliteIdf/4.png" alt="Segmentation K-Means">
+          <div class="thumb-overlay">
+            <div class="thumb-overlay-title">Segmentation K-Means</div>
+            <div class="thumb-overlay-desc">4 profils de stations : Hubs majeurs, Intermédiaires, Proximité, Ultra-pendulaires</div>
+          </div>
+        </div>
+        <button class="preview-expand-btn" onclick="openLightbox('p5', 0); event.stopPropagation();">⤢ Voir en grand</button>
+      </div>
+      <div class="project-body">
+        <div class="project-tags">
+          <span class="tag">Python</span>
+          <span class="tag tag-ai">K-Means</span>
+          <span class="tag">Power BI</span>
+          <span class="tag">Open Data</span>
+          <span class="tag">Pandas</span>
+          <span class="tag">Seaborn</span>
+        </div>
+        <div class="project-title">Analyse de la Mobilité Urbaine en Île-de-France</div>
+        <p class="project-desc">Analyse complète des flux de validation sur le réseau ferré francilien (métro, RER, Transilien) entre 2022 et 2024. Traitement de 5,8M de lignes issues de l'open data IDFM, analyse temporelle de la saisonnalité, segmentation des 1 179 stations par profil d'usage via K-Means, et dashboard Power BI interactif. Restitution des conclusions à un interlocuteur métier non technique avec recommandations opérationnelles.</p>
+        <div class="project-metrics">
+          <div class="metric"><div class="metric-val">4.9B</div><div class="metric-label">Validations</div></div>
+          <div class="metric"><div class="metric-val">1 179</div><div class="metric-label">Stations</div></div>
+          <div class="metric"><div class="metric-val">-47%</div><div class="metric-label">Trafic en août</div></div>
+          <div class="metric"><div class="metric-val">4</div><div class="metric-label">Profils identifiés</div></div>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/CarnageM-10/mobilite-idf" target="_blank" class="project-link github">GitHub</a>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- CONTACT -->
 <section class="contact-section" id="contact">
   <div class="reveal">
     <div class="section-label">Me contacter</div>
@@ -1062,13 +1110,12 @@
       </a>
     </div>
     <div class="contact-right">
-      <p>"Je recherche une alternance Data Engineer / Data Analyst à partir d'avril 2026."</p>
+      <p>"Je recherche une alternance Data Engineer / Data Analyst à partir de septembre 2026."</p>
       <span>Master Big Data — EPITECH · Kremlin-Bicêtre</span>
     </div>
   </div>
 </section>
 
-<!-- LIGHTBOX -->
 <div id="lightbox" class="lightbox">
   <span class="lightbox-close" onclick="closeLightbox()">×</span>
   <div class="lightbox-counter" id="lightbox-counter">1 / 4</div>
@@ -1084,7 +1131,6 @@
   <div class="lightbox-dots" id="lightbox-dots"></div>
 </div>
 
-<!-- FOOTER -->
 <footer>
   Fresnel Mbouma · Portfolio Data — <span>2026</span>
 </footer>
@@ -1110,20 +1156,26 @@
     p2: [
       { src: 'CustomerDataPipelineAnalytics/1.png', title: 'Customer Analytics', desc: 'Vue globale des KPIs clients : CA total, clients actifs et panier moyen' },
       { src: 'CustomerDataPipelineAnalytics/2.png', title: 'Executive Summary', desc: 'Synthèse exécutive des performances e-commerce sur la période analysée' },
-      { src: 'CustomerDataPipelineAnalytics/3.png', title: 'Geographic Science', desc: 'Répartition géographique du chiffre d\'affaires par pays' },
+      { src: 'CustomerDataPipelineAnalytics/3.png', title: 'Geographic Science', desc: "Répartition géographique du chiffre d'affaires par pays" },
       { src: 'CustomerDataPipelineAnalytics/4.png', title: 'Product Performance', desc: 'Analyse des top produits par CA, volume vendu et nombre de clients' }
     ],
     p3: [
-      { src: 'SalesPredictiveDashboard/1.png', title: 'Pipeline & Insights IA', desc: 'Script de génération automatique d\'insights business via Llama 3 / Groq API' },
+      { src: 'SalesPredictiveDashboard/1.png', title: 'Pipeline & Insights IA', desc: "Script de génération automatique d'insights business via Llama 3 / Groq API" },
       { src: 'SalesPredictiveDashboard/2.png', title: 'Dashboard Flask', desc: 'Interface web interactive : KPIs, graphiques Chart.js et insights IA en temps réel' },
-      { src: 'SalesPredictiveDashboard/3.png', title: 'Évolution mensuelle des ventes', desc: 'Courbe temporelle du chiffre d\'affaires mois par mois — Apache Superset' },
+      { src: 'SalesPredictiveDashboard/3.png', title: 'Évolution mensuelle des ventes', desc: "Courbe temporelle du chiffre d'affaires mois par mois — Apache Superset" },
       { src: 'SalesPredictiveDashboard/4.png', title: 'Répartition par catégorie & genre', desc: 'Distribution des ventes par segment produit et profil client — Apache Superset' }
     ],
     p4: [
-      { src: 'HrAttritionAnalytics/1.png', title: 'KPI Cards RH', desc: 'Vue globale : total employés, taux d\'attrition 16.1% et employés à risque élevé' },
-      { src: 'HrAttritionAnalytics/2.png', title: 'Facteurs d\'attrition', desc: 'Analyse des variables clés : overtime, satisfaction, déplacements et ancienneté' },
-      { src: 'HrAttritionAnalytics/3.png', title: 'Profils employés', desc: 'Nuage de points âge vs salaire coloré par niveau de risque d\'attrition' },
+      { src: 'HrAttritionAnalytics/1.png', title: 'KPI Cards RH', desc: "Vue globale : total employés, taux d'attrition 16.1% et employés à risque élevé" },
+      { src: 'HrAttritionAnalytics/2.png', title: "Facteurs d'attrition", desc: "Analyse des variables clés : overtime, satisfaction, déplacements et ancienneté" },
+      { src: 'HrAttritionAnalytics/3.png', title: 'Profils employés', desc: "Nuage de points âge vs salaire coloré par niveau de risque d'attrition" },
       { src: 'HrAttritionAnalytics/4.png', title: 'Top 15 facteurs — Random Forest', desc: 'Feature importance du modèle Random Forest — variables les plus prédictives' }
+    ],
+    p5: [
+      { src: 'MobiliteIdf/1.png', title: 'Vue globale — KPIs', desc: '4,9 milliards de validations analysées — Top réseaux et stations les plus fréquentées' },
+      { src: 'MobiliteIdf/2.png', title: 'Analyse temporelle', desc: 'Évolution mensuelle du trafic 2022–2024 et patterns par jour de semaine' },
+      { src: 'MobiliteIdf/3.png', title: 'Top stations', desc: 'Classement des 20 stations les plus fréquentées — Saint-Lazare en tête avec 178M validations' },
+      { src: 'MobiliteIdf/4.png', title: 'Segmentation K-Means', desc: '4 profils de stations : Hubs majeurs, Intermédiaires, Proximité, Ultra-pendulaires' }
     ]
   };
 
