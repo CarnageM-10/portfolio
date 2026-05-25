@@ -701,6 +701,121 @@
     .lightbox-nav.prev { left: -12px; }
     .lightbox-nav.next { right: -12px; }
   }
+
+  /* ABOUT */
+  .about-section { background: var(--creme); }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .about-photo-wrapper {
+    position: relative;
+  }
+
+  .about-photo {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+    filter: grayscale(15%);
+    transition: filter 0.4s;
+  }
+
+  .about-photo:hover { filter: grayscale(0%); }
+
+  .about-photo-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: -16px;
+    right: -16px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--bordeaux);
+    border-radius: 12px;
+    z-index: -1;
+    opacity: 0.3;
+  }
+
+  .about-content { display: flex; flex-direction: column; gap: 24px; }
+
+  .about-text {
+    font-size: 16px;
+    color: var(--text-mid);
+    line-height: 1.85;
+  }
+
+  .about-text strong { color: var(--bordeaux); font-weight: 500; }
+
+  .about-traits {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+  }
+
+  .trait {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 8px 18px;
+    border-radius: 4px;
+    border: 1.5px solid var(--bordeaux);
+    color: var(--bordeaux);
+    background: transparent;
+    transition: all 0.3s;
+  }
+
+  .trait:hover {
+    background: var(--bordeaux);
+    color: var(--creme);
+  }
+
+  .about-formation {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 24px;
+    background: var(--creme-dark);
+    border-radius: 8px;
+    border-left: 3px solid var(--bordeaux);
+  }
+
+  .formation-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+  }
+
+  .formation-name {
+    font-weight: 500;
+    color: var(--text-dark);
+  }
+
+  .formation-detail {
+    font-size: 12px;
+    color: var(--text-light);
+    letter-spacing: 0.5px;
+  }
+
+  .formation-year {
+    font-size: 11px;
+    color: var(--bordeaux);
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 900px) {
+    .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    .about-photo-wrapper { max-width: 260px; margin: 0 auto; }
+  }
 </style>
 </head>
 <body>
@@ -708,6 +823,7 @@
 <nav>
   <div class="nav-logo">FM</div>
   <ul class="nav-links">
+    <li><a href="#apropos">À propos</a></li>
     <li><a href="#projets">Projets</a></li>
     <li><a href="#competences">Compétences</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -736,6 +852,55 @@
     <div class="stat">
       <div class="stat-num">ML</div>
       <div class="stat-label">IA & Prédictif</div>
+    </div>
+  </div>
+</section>
+
+
+<section class="about-section" id="apropos">
+  <div class="about-grid">
+    <div class="about-photo-wrapper reveal">
+      <img src="photo.jpeg" alt="Fresnel Mbouma" class="about-photo">
+    </div>
+    <div class="about-content reveal">
+      <div>
+        <div class="section-label">À propos</div>
+        <div class="section-title">Qui suis-je ?</div>
+      </div>
+      <p class="about-text">
+        Après un <strong>Bachelor en Conception de Systèmes d'Information</strong> obtenu à l'EPF — École d'Ingénierie, 
+        j'ai choisi de me spécialiser en data en intégrant le <strong>Master Big Data d'EPITECH</strong>. 
+        Un choix guidé par une conviction profonde : les données ont toujours existé, bien avant leur numérisation. 
+        Ce sont des informations du quotidien qui structurent nos sociétés — et la manière dont on les collecte, 
+        les transforme et les valorise pour <strong>impacter concrètement le monde</strong> est ce qui m'a toujours attiré.
+      </p>
+      <p class="about-text">
+        Je construis mes projets de A à Z — de la collecte brute jusqu'au rendu final — parce que 
+        comprendre chaque maillon de la chaîne data est ce qui fait la différence entre un technicien 
+        et quelqu'un qui <strong>sait vraiment ce qu'il fait et pourquoi</strong>.
+      </p>
+      <div class="about-traits">
+        <span class="trait">Rigueur</span>
+        <span class="trait">Autonomie</span>
+        <span class="trait">Perfectionnisme</span>
+      </div>
+      <div class="about-formation">
+        <div class="formation-item">
+          <div>
+            <div class="formation-name">Master Big Data</div>
+            <div class="formation-detail">EPITECH · Kremlin-Bicêtre</div>
+          </div>
+          <div class="formation-year">2025 – 2027</div>
+        </div>
+        <div style="height:1px; background: rgba(107,39,55,0.1);"></div>
+        <div class="formation-item">
+          <div>
+            <div class="formation-name">Bachelor Conception de Systèmes d'Information</div>
+            <div class="formation-detail">EPF — École d'Ingénierie</div>
+          </div>
+          <div class="formation-year">2022 – 2025</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1304,7 +1469,13 @@
   document.getElementById('lightbox').addEventListener('click', (e) => {
     if (e.target === document.getElementById('lightbox')) closeLightbox();
   });
+
+  
 </script>
+
+<!-- GoatCounter Analytics — no cookies, RGPD-friendly -->
+  <script data-goatcounter="https://carnage.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
 
 </body>
 </html>
