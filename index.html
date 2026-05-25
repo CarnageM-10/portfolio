@@ -730,7 +730,7 @@
       <div class="stat-label">Validations analysées</div>
     </div>
     <div class="stat">
-      <div class="stat-num">5</div>
+      <div class="stat-num">6</div>
       <div class="stat-label">Projets data</div>
     </div>
     <div class="stat">
@@ -799,6 +799,12 @@
       <div class="skill-icon">🎨</div>
       <div class="skill-name">Seaborn</div>
       <div class="skill-level">Visualisation statistique · Heatmaps · Clustering</div>
+    </div>
+    <!-- NOUVELLE COMPÉTENCE — issue du projet Baromètre Santé Mentale -->
+    <div class="skill-card">
+      <div class="skill-icon">📐</div>
+      <div class="skill-name">R / RStudio</div>
+      <div class="skill-level">dplyr · tidyr · ggplot2 · R Markdown</div>
     </div>
   </div>
 </section>
@@ -1085,6 +1091,60 @@
       </div>
     </div>
 
+    <!-- PROJET 6 — Baromètre Santé Mentale -->
+    <div class="project-card reveal">
+      <div class="project-gallery-preview" onclick="openLightbox('p6', 0)">
+        <div class="project-new-badge">Nouveau</div>
+        <div class="preview-thumb">
+          <img src="StudentMentalHealth/1.png" alt="Prévalence des troubles">
+          <div class="thumb-overlay">
+            <div class="thumb-overlay-title">Prévalence des troubles</div>
+            <div class="thumb-overlay-desc">Distribution des troubles déclarés : dépression, anxiété et attaques de panique</div>
+          </div>
+        </div>
+        <div class="preview-thumb">
+          <img src="StudentMentalHealth/2.png" alt="Matrice de corrélations">
+          <div class="thumb-overlay">
+            <div class="thumb-overlay-title">Matrice de corrélations</div>
+            <div class="thumb-overlay-desc">Heatmap des corrélations entre toutes les variables de santé mentale</div>
+          </div>
+        </div>
+        <div class="preview-thumb">
+          <img src="StudentMentalHealth/3.png" alt="GPA &amp; Dépression">
+          <div class="thumb-overlay">
+            <div class="thumb-overlay-title">GPA &amp; Dépression</div>
+            <div class="thumb-overlay-desc">Boxplot comparant le GPA des étudiants dépressifs vs non dépressifs par année</div>
+          </div>
+        </div>
+        <div class="preview-thumb">
+          <img src="StudentMentalHealth/4.png" alt="Recours aux soins">
+          <div class="thumb-overlay">
+            <div class="thumb-overlay-title">Recours aux soins</div>
+            <div class="thumb-overlay-desc">Paradoxe frappant : taux de troubles élevés vs très faible recours aux spécialistes</div>
+          </div>
+        </div>
+        <button class="preview-expand-btn" onclick="openLightbox('p6', 0); event.stopPropagation();">⤢ Voir en grand</button>
+      </div>
+      <div class="project-body">
+        <div class="project-tags">
+          <span class="tag">R</span>
+          <span class="tag">ggplot2</span>
+          <span class="tag tag-ai">Tests statistiques</span>
+          <span class="tag">R Markdown</span>
+        </div>
+        <div class="project-title">Baromètre de la Santé Mentale des Étudiants</div>
+        <p class="project-desc">Analyse statistique complète sur un dataset de santé publique (Kaggle). Nettoyage avec dplyr/tidyr, tests comparatifs (t-test, ANOVA), visualisations ggplot2 et rapport R Markdown reproductible. Note de synthèse avec recommandations actionnables remise à un référent métier.</p>
+        <div class="project-metrics">
+          <div class="metric"><div class="metric-val">101</div><div class="metric-label">Étudiants</div></div>
+          <div class="metric"><div class="metric-val">~35%</div><div class="metric-label">Taux dépression</div></div>
+          <div class="metric"><div class="metric-val">4</div><div class="metric-label">Visualisations</div></div>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/CarnageM-10/student-mental-health" target="_blank" class="project-link github">GitHub</a>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -1182,6 +1242,12 @@
       { src: 'MobiliteIdf/2.png', title: 'Analyse temporelle', desc: 'Évolution mensuelle du trafic 2022–2024 et patterns par jour de semaine' },
       { src: 'MobiliteIdf/3.png', title: 'Top stations', desc: 'Classement des 20 stations les plus fréquentées — Saint-Lazare en tête avec 178M validations' },
       { src: 'MobiliteIdf/4.png', title: 'Segmentation K-Means', desc: '4 profils de stations : Hubs majeurs, Intermédiaires, Proximité, Ultra-pendulaires' }
+    ],
+    p6: [
+      { src: 'StudentMentalHealth/1.png', title: 'Prévalence des troubles', desc: 'Distribution des troubles déclarés : dépression, anxiété et attaques de panique' },
+      { src: 'StudentMentalHealth/2.png', title: 'Matrice de corrélations', desc: 'Heatmap des corrélations entre toutes les variables de santé mentale' },
+      { src: 'StudentMentalHealth/3.png', title: 'GPA & Dépression', desc: 'Boxplot comparant le GPA des étudiants dépressifs vs non dépressifs par année' },
+      { src: 'StudentMentalHealth/4.png', title: 'Recours aux soins', desc: 'Paradoxe frappant : taux de troubles élevés vs très faible recours aux spécialistes' }
     ]
   };
 
