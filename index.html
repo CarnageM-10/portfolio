@@ -1313,6 +1313,61 @@
   </div>
 </section>
 
+<!-- PROJET 7 — Automated Control Pipeline -->
+<div class="project-card reveal">
+  <div class="project-gallery-preview" onclick="openLightbox('p7', 0)">
+    <div class="project-new-badge">Nouveau</div>
+    <div class="preview-thumb">
+      <img src="AutomatedControlPipeline/1.png" alt="Terminal Pipeline">
+      <div class="thumb-overlay">
+        <div class="thumb-overlay-title">Pipeline Automatisé</div>
+        <div class="thumb-overlay-desc">Exécution complète du pipeline avec contrôles qualité en temps réel</div>
+      </div>
+    </div>
+    <div class="preview-thumb">
+      <img src="AutomatedControlPipeline/2.png" alt="DBeaver SQL">
+      <div class="thumb-overlay">
+        <div class="thumb-overlay-title">Contrôles SQL</div>
+        <div class="thumb-overlay-desc">Analyse des anomalies via requêtes avancées sur SQLite</div>
+      </div>
+    </div>
+    <div class="preview-thumb">
+      <img src="AutomatedControlPipeline/3.png" alt="Rapport HTML">
+      <div class="thumb-overlay">
+        <div class="thumb-overlay-title">Rapport Automatique</div>
+        <div class="thumb-overlay-desc">Génération automatique de rapport HTML des contrôles qualité</div>
+      </div>
+    </div>
+    <div class="preview-thumb">
+      <img src="AutomatedControlPipeline/4.png" alt="Dashboard Power BI">
+      <div class="thumb-overlay">
+        <div class="thumb-overlay-title">Quality Dashboard</div>
+        <div class="thumb-overlay-desc">KPIs, anomalies par règle et analyse des fraudes</div>
+      </div>
+    </div>
+    <button class="preview-expand-btn" onclick="openLightbox('p7', 0); event.stopPropagation();">⤢ Voir en grand</button>
+  </div>
+  <div class="project-body">
+    <div class="project-tags">
+      <span class="tag">Python</span>
+      <span class="tag">SQL</span>
+      <span class="tag">Pandas</span>
+      <span class="tag">Power BI</span>
+      <span class="tag">SQLite</span>
+    </div>
+    <div class="project-title">Automated Control Pipeline</div>
+    <p class="project-desc">Pipeline ETL complet de contrôle qualité sur 50 000+ transactions financières. 6 règles métier avancées, détection automatique d'anomalies, logging des alertes, rapport HTML généré et dashboard Power BI interactif pour le monitoring qualité des données.</p>
+    <div class="project-metrics">
+      <div class="metric"><div class="metric-val">50K</div><div class="metric-label">Transactions</div></div>
+      <div class="metric"><div class="metric-val">909</div><div class="metric-label">Anomalies</div></div>
+      <div class="metric"><div class="metric-val">6</div><div class="metric-label">Règles métier</div></div>
+    </div>
+    <div class="project-links">
+      <a href="https://github.com/CarnageM-10/automated-control-pipeline" target="_blank" class="project-link github">GitHub</a>
+    </div>
+  </div>
+</div>
+
 <div class="divider"></div>
 
 <section class="contact-section" id="contact">
@@ -1413,7 +1468,13 @@
       { src: 'StudentMentalHealth/2.png', title: 'Matrice de corrélations', desc: 'Heatmap des corrélations entre toutes les variables de santé mentale' },
       { src: 'StudentMentalHealth/3.png', title: 'GPA & Dépression', desc: 'Boxplot comparant le GPA des étudiants dépressifs vs non dépressifs par année' },
       { src: 'StudentMentalHealth/4.png', title: 'Recours aux soins', desc: 'Paradoxe frappant : taux de troubles élevés vs très faible recours aux spécialistes' }
-    ]
+    ],
+    p7: [
+      { src: 'AutomatedControlPipeline/1.png', title: 'Terminal Pipeline', desc: 'Exécution complète du pipeline avec contrôles qualité en temps réel' },
+      { src: 'AutomatedControlPipeline/2.png', title: 'DBeaver SQL', desc: 'Analyse des anomalies via requêtes avancées sur SQLite' },
+      { src: 'AutomatedControlPipeline/3.png', title: 'Rapport Automatique', desc: 'Génération automatique de rapport HTML des contrôles qualité' },
+      { src: 'AutomatedControlPipeline/4.png', title: 'Quality Dashboard', desc: 'KPIs, anomalies par règle et analyse des fraudes' }
+    ],
   };
 
   let currentGallery = [];
