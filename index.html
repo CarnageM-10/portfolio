@@ -30,7 +30,6 @@
     overflow-x: hidden;
   }
 
-  /* NAV */
   nav {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -70,7 +69,6 @@
 
   .nav-links a:hover { color: var(--bordeaux); }
 
-  /* HERO */
   .hero {
     min-height: 100vh;
     display: flex;
@@ -215,7 +213,6 @@
     margin-top: 4px;
   }
 
-  /* SECTION */
   section { padding: 100px 60px; }
 
   .section-label {
@@ -243,7 +240,6 @@
     margin-bottom: 64px;
   }
 
-  /* SKILLS */
   .skills-section { background: var(--creme-dark); }
 
   .skills-grid {
@@ -289,7 +285,6 @@
     text-transform: uppercase;
   }
 
-  /* PROJECTS */
   .projects-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -495,7 +490,6 @@
   .project-link.github { color: var(--marron); border-color: var(--marron); }
   .project-link.github:hover { background: var(--marron); color: var(--creme); }
 
-  /* LIGHTBOX */
   .lightbox {
     display: none;
     position: fixed;
@@ -599,7 +593,6 @@
 
   .lightbox-dot.active { background: var(--bordeaux-light); transform: scale(1.4); }
 
-  /* CONTACT */
   .contact-section { background: var(--marron); color: var(--creme); }
   .contact-section .section-label { color: rgba(245,240,232,0.5); }
   .contact-section .section-title { color: var(--creme); }
@@ -652,7 +645,6 @@
 
   .contact-right span { font-size: 14px; color: rgba(245,240,232,0.6); }
 
-  /* FOOTER */
   footer {
     background: var(--text-dark);
     color: rgba(245,240,232,0.4);
@@ -702,7 +694,6 @@
     .lightbox-nav.next { right: -12px; }
   }
 
-  /* ABOUT */
   .about-section { background: var(--creme); }
 
   .about-grid {
@@ -846,7 +837,7 @@
       <div class="stat-label">Validations analysées</div>
     </div>
     <div class="stat">
-      <div class="stat-num">7</div>
+      <div class="stat-num">8</div>
       <div class="stat-label">Projets data</div>
     </div>
     <div class="stat">
@@ -959,13 +950,11 @@
       <div class="skill-name">Git</div>
       <div class="skill-level">GitHub · Versioning</div>
     </div>
-    <!-- NOUVELLE COMPÉTENCE — issue du projet Mobilité IDF -->
     <div class="skill-card">
       <div class="skill-icon">🎨</div>
       <div class="skill-name">Seaborn</div>
       <div class="skill-level">Visualisation statistique · Heatmaps · Clustering</div>
     </div>
-    <!-- NOUVELLE COMPÉTENCE — issue du projet Baromètre Santé Mentale -->
     <div class="skill-card">
       <div class="skill-icon">📐</div>
       <div class="skill-name">R / RStudio</div>
@@ -985,7 +974,6 @@
 
   <div class="projects-grid">
 
-    <!-- PROJET 1 -->
     <div class="project-card reveal">
       <div class="project-gallery-preview" onclick="openLightbox('p1', 0)">
         <div class="preview-thumb">
@@ -1038,7 +1026,6 @@
       </div>
     </div>
 
-    <!-- PROJET 2 -->
     <div class="project-card reveal">
       <div class="project-gallery-preview" onclick="openLightbox('p2', 0)">
         <div class="preview-thumb">
@@ -1091,7 +1078,6 @@
       </div>
     </div>
 
-    <!-- PROJET 3 -->
     <div class="project-card reveal">
       <div class="project-gallery-preview" onclick="openLightbox('p3', 0)">
         <div class="preview-thumb">
@@ -1145,7 +1131,6 @@
       </div>
     </div>
 
-    <!-- PROJET 4 -->
     <div class="project-card reveal">
       <div class="project-gallery-preview" onclick="openLightbox('p4', 0)">
         <div class="project-new-badge">Nouveau</div>
@@ -1199,7 +1184,6 @@
       </div>
     </div>
 
-    <!-- PROJET 5 — Mobilité IDF (même taille que les autres, aligné à gauche) -->
     <div class="project-card reveal">
       <div class="project-gallery-preview" onclick="openLightbox('p5', 0)">
         <div class="project-new-badge">Nouveau</div>
@@ -1256,7 +1240,6 @@
       </div>
     </div>
 
-    <!-- PROJET 6 — Baromètre Santé Mentale -->
     <div class="project-card reveal">
       <div class="project-gallery-preview" onclick="openLightbox('p6', 0)">
         <div class="project-new-badge">Nouveau</div>
@@ -1310,7 +1293,6 @@
       </div>
     </div>
 
-    <!-- PROJET 7 — Automated Control Pipeline -->
     <div class="project-card reveal">
       <div class="project-gallery-preview" onclick="openLightbox('p7', 0)">
         <div class="project-new-badge">Nouveau</div>
@@ -1361,6 +1343,56 @@
         </div>
         <div class="project-links">
           <a href="https://github.com/CarnageM-10/automated-control-pipeline" target="_blank" class="project-link github">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card reveal">
+      <div class="project-gallery-preview" onclick="openLightbox('p8', 0)">
+        <div class="project-new-badge">Nouveau</div>
+        <div class="preview-thumb">
+          <img src="ProjetRHTurnover/1.png" alt="Contrôle qualité Power Query">
+          <div class="thumb-overlay">
+            <div class="thumb-overlay-title">Contrôle qualité</div>
+            <div class="thumb-overlay-desc">Nettoyage et vérification de la qualité des données via Power Query</div>
+          </div>
+        </div>
+        <div class="preview-thumb">
+          <img src="ProjetRHTurnover/2.png" alt="TCD taux de turnover">
+          <div class="thumb-overlay">
+            <div class="thumb-overlay-title">Taux de turnover</div>
+            <div class="thumb-overlay-desc">Tableau croisé dynamique du taux de départ par département</div>
+          </div>
+        </div>
+        <div class="preview-thumb">
+          <img src="ProjetRHTurnover/3.png" alt="TCD ancienneté moyenne">
+          <div class="thumb-overlay">
+            <div class="thumb-overlay-title">Ancienneté moyenne</div>
+            <div class="thumb-overlay-desc">Ancienneté moyenne des collaborateurs par département</div>
+          </div>
+        </div>
+        <div class="preview-thumb">
+          <img src="ProjetRHTurnover/4.png" alt="Satisfaction vs Attrition">
+          <div class="thumb-overlay">
+            <div class="thumb-overlay-title">Satisfaction vs Attrition</div>
+            <div class="thumb-overlay-desc">Corrélation entre le niveau de satisfaction et le taux de départ</div>
+          </div>
+        </div>
+        <button class="preview-expand-btn" onclick="openLightbox('p8', 0); event.stopPropagation();">⤢ Voir en grand</button>
+      </div>
+      <div class="project-body">
+        <div class="project-tags">
+          <span class="tag">Excel</span>
+          <span class="tag">Power Query</span>
+          <span class="tag">VBA</span>
+          <span class="tag">Power BI</span>
+        </div>
+        <div class="project-title">Analyse RH & Prédiction du Turnover Collaborateurs</div>
+        <p class="project-desc">Analyse du turnover sur 1 470 employés (dataset IBM HR Analytics). Nettoyage et contrôle qualité via Power Query, tableaux croisés dynamiques avec segments, score de risque de départ automatisé via macro VBA, et dashboard Power BI de pilotage RH.</p>
+        <div class="project-metrics">
+          <div class="metric"><div class="metric-val">1 470</div><div class="metric-label">Employés analysés</div></div>
+          <div class="metric"><div class="metric-val">16,1%</div><div class="metric-label">Taux de turnover</div></div>
+          <div class="metric"><div class="metric-val">x3</div><div class="metric-label">Risque si heures sup</div></div>
         </div>
       </div>
     </div>
@@ -1476,6 +1508,14 @@
       { src: 'AutomatedControlPipeline/2.png', title: 'DBeaver SQL', desc: 'Analyse des anomalies via requêtes avancées sur SQLite' },
       { src: 'AutomatedControlPipeline/3.png', title: 'Rapport Automatique', desc: 'Génération automatique de rapport HTML des contrôles qualité' },
       { src: 'AutomatedControlPipeline/4.png', title: 'Quality Dashboard', desc: 'KPIs, anomalies par règle et analyse des fraudes' }
+    ],
+    p8: [
+      { src: 'ProjetRHTurnover/1.png', title: 'Contrôle qualité', desc: 'Nettoyage et vérification de la qualité des données via Power Query' },
+      { src: 'ProjetRHTurnover/2.png', title: 'Taux de turnover', desc: 'Tableau croisé dynamique du taux de départ par département' },
+      { src: 'ProjetRHTurnover/3.png', title: 'Ancienneté moyenne', desc: 'Ancienneté moyenne des collaborateurs par département' },
+      { src: 'ProjetRHTurnover/4.png', title: 'Satisfaction vs Attrition', desc: 'Corrélation entre le niveau de satisfaction et le taux de départ' },
+      { src: 'ProjetRHTurnover/5.png', title: 'Score de risque & macro VBA', desc: 'Calcul du score de risque de départ automatisé via une macro VBA' },
+      { src: 'ProjetRHTurnover/6.png', title: 'Dashboard Power BI', desc: 'Vue d\'ensemble RH : KPIs, répartition des départs et employés à risque élevé' }
     ],
   };
 
